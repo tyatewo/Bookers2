@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'homes#top'
+  get "/homes/about" => "homes#about", as: "about"
   devise_for :users
   #get 'homes/top'
   #get 'homes/about'
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
   #get 'books/edit'
   #get 'homes/top'
 
-  resources :books, onry: [:index, :show, :edit]
+  resources :books, onry: [:new, :create, :index, :show, :edit, :destroy]
   resources :users, only: [:show, :edit, :update]
 
 end
