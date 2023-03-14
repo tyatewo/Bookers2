@@ -1,14 +1,22 @@
-<% @books.each do |book| %>
+<div class= "container py-5">
 
-<div>
-  <p><%= image_tag book.get_image %></p>
-  <p>Title: <%= link_to "book.title", book_path.id %></p>
-  <p>Opinion: <%= book.opinion %></p>
-  <p><%= link_to "book.user.name", user_path.id %></p>
+  <% @books.each do |book| %>
+
+  <div class= "row">
+
+  <div>
+    <p><%= image_tag book.get_image %></p>
+    <p>Title: <%= link_to "book.title", book_path.id %></p>
+    <p>Opinion: <%= book.opinion %></p>
+    <p><%= link_to "book.user.name", user_path.id %></p>
+  </div>
+
+  <% end %>
+
+  </div>
+
+<%= paginate books %>
 </div>
-
-<% end %>
-
 
 
 

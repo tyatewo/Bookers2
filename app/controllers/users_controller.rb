@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @book = Book.find(params[:id])
     @books = @user.books
+    #@books = @user.books.page(params[:page])
   end
 
   def edit
