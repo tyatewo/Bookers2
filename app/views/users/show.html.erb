@@ -1,15 +1,31 @@
-<% @books.each do |book| %>
-<div>
-  <p><%= image_tag book.get_image %></p>
-  <p>Title: <%= link_to "book.title",book_path.id %></p>
-  <p>Opinion: <%= book.opinion %></p>
-  <p><%= link_to "book.user.name", user_path.id %></p>
-  <%= if @book.user == current_user %>
-    <%= link_to "Destroy", book_path(@book), method: :delete %>
-  <% end %>
+<div class= "container">
+
+<div class= "row">
+
+  <div class= "col-md-5 col-sm-10 mx-2 mx-sm-auto">
+
+  <div class="body p-4">
+
+
+<div class= "col-12">
+<% @users.each do |user| %>
+  <p><%= image_tag user.get_profile_image(100,100) %></p>
+  <p><%= link_to user.name, user_path %></p>
+<% end %>
 </div>
 
-<%= render 'list', book: @book %>
+
+<%= render 'books/list', book: @book, books: @books, user: @user %>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+</div>
 
 
 <p>Find me in app/views/users/show.html.erb</p>
