@@ -1,34 +1,36 @@
 
-
-<div class= "container px-5 px-sm-0">
+<div class= "container">
 
 <div class= "row">
 
-  <%= render 'books/list', book: @book, books: @books, user: @user %>
+<div class= "col-md-3">
+
+<%= render 'books/list', book: @book, books: @books, user: @user %>
+
+</div>
 
 
-  <div class= "col-md-5 col-sm-10 mx-2 mx-sm-auto">
+<div class= 'col-md-8 offset-md-1'>
 
-  <div class="body p-4">
+<h2>Book detail</h2>
+
+<table class="table">
+
+  <tbody>
 
 
-<div class= "col-12">
-<% @users.each do |user| %>
-  <p><%= image_tag user.get_profile_image(100,100) %></p>
-  <p><%= link_to user.name, user_path %></p>
-<% end %>
+  </tbody>
+
+</table>
+
+</div>
+
+</div>
+
 </div>
 
 
 
-
-  </div>
-
-  </div>
-
-</div>
-
-</div>
 
 
 <p>Find me in app/views/users/show.html.erb</p>

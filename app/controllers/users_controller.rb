@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   before_action :is_matching_login_user, only: [:edit, :update]
 
+
+
+
   def show
     @user = User.find(params[:id])
     @users = User.all
@@ -18,7 +21,7 @@ class UsersController < ApplicationController
       flash[:notice] = "You have updated user successfully."
       redirect_to user_path(@user.id)
     else
-      render :index
+      redirect_to edit_user_path
     end
   end
 
