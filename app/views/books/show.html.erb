@@ -1,6 +1,14 @@
-<h1>Book detail</h1>
+<div class= "container px-5 px-sm-0">
 
-<div>
+<div class= "row">
+
+<%= render 'list', book: @book %>
+
+<div class= 'col-md-8 offset-md-1'>
+
+<h2>Book detail</h2>
+
+<table class=>
   <p><%= image_tag book.get_image %></p>
   <p>Title: <%= link_to "book.title",book_path.id %></p>
   <p>Opinion: <%= book.body %></p>
@@ -11,5 +19,4 @@
 </div>
 
 
-
-<%= render 'list', book: @book %>
+</div>
