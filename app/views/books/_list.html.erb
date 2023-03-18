@@ -18,11 +18,7 @@
 <% end %>
 
 
-<div class= "container px-5 px-sm-0">
 
-<div class= "row">
-
-<div class= "col-md-3">
 
 <h2>User info</h2>
 <table class= "table">
@@ -47,15 +43,11 @@
 
 
 
-
 <% if user == current_user %>
-<p class= "row">
   <%= link_to edit_user_path(user.id), class: "btn btn-outline-secondary btn-block edit_user_88951" do %>
     <i class="fas fa-user-cog"></i>
+  <% end %>
 <% end %>
-</p>
-<% end %>
-
 
 
 
@@ -80,8 +72,3 @@
 
 <% end %>
 
-</div>
-
-</div>
-
-</div>
