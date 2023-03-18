@@ -4,22 +4,6 @@
 </h6>
 
 
-
-
-<% if book.errors.any? %>
-  <ul class= "alert alert-danger" role="alert">
-    <h6 class="alert-heading">
-  <%= book.errors.count %>error prohibited this obj from being saved:
-    </h6>
-    <% book.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
-
-
-
-
 <h2>User info</h2>
 <table class= "table">
 
